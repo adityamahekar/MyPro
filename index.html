@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Mahekar - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aditya Mahekar</h1>
+            <p id="typing" style="font-family: monospace; display: inline;"></p><span id="cursor" style="font-family: monospace; display: inline; animation: blink 0.5s step-end infinite;">|</span>
+        </header>
+
+        <nav>
+            <div class="nav-scroll-container">
+                <a href="index.html" class="nav-button active">Home</a>
+                <a href="resume.html" class="nav-button">Resume</a>
+                <a href="experience.html" class="nav-button">Experience</a>
+                <a href="education.html" class="nav-button">Education</a>
+                <a href="skills.html" class="nav-button">Skills</a>
+                <a href="projects.html" class="nav-button">Projects</a>
+                <a href="activities.html" class="nav-button">Activities</a>
+                <a href="certifications.html" class="nav-button">Certifications</a>
+                <a href="badges.html" class="nav-button">Badges</a>
+                <a href="languages.html" class="nav-button">Languages</a>
+                <a href="connect.html" class="nav-button">Connect Me</a>
+            </div>
+        </nav>
+
+        <main>
+            <section id="home" class="active">
+                <div class="current-position">
+                    <i class="fas fa-user-graduate"></i> Currently pursuing Computer Science Engineering at BMS Institute of Technology and Management
+                </div>
+                
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>Passionate Computer Science Engineering student at BMS Institute of Technology and Management, Bengaluru, with a strong foundation in Mechanical Engineering from Government Polytechnic Karwar.</p>
+                    
+                    <p>Proficient in Java, Python, C, HTML, CSS, JavaScript, and CNC Programming, I bridge the gap between Mechanical and Software Engineering. With strong UI/UX design skills, I craft user-friendly digital solutions.</p>
+                    
+                    <p>Fluent in multiple languages, I thrive in diverse teams and am eager to contribute to innovative projects that make an impact.</p>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="https://docs.google.com/document/d/1_R-uNJbsfpI1cCQVQWQywgFeE-5IBDyx/edit?tab=t.0" class="download-button" onclick="downloadResume()">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+                
+                <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+                    <div class="contact-item" style="margin: 0; background: rgba(67, 97, 238, 0.15);">
+                        <i class="fas fa-eye"></i>
+                        <span id="viewCount">0</span> Views
+                    </div>
+                    
+                    <button class="action-button" onclick="sharePortfolio()" style="padding: 0.8rem 1.5rem; min-width: auto;">
+                        <i class="fas fa-share-alt"></i> Share Portfolio
+                    </button>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="quick-links">
+                    <h2>Quick Access</h2>
+                    <div class="links-grid">
+                        <a href="projects.html" class="quick-link-card">
+                            <i class="fas fa-code"></i>
+                            <span>Projects</span>
+                        </a>
+                        <a href="skills.html" class="quick-link-card">
+                            <i class="fas fa-cogs"></i>
+                            <span>Skills</span>
+                        </a>
+                        <a href="certifications.html" class="quick-link-card">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certifications</span>
+                        </a>
+                        <a href="experience.html" class="quick-link-card">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Experience</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Aditya Mahekar. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

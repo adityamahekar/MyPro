@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect - Aditya Mahekar</title>
+    <link rel="stylesheet" href="connect-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            <h1>Connect With Me</h1>
+            <p>Let's get in touch and collaborate</p>
+        </header>
+
+        <nav>
+            <div class="nav-scroll-container">
+                <a href="index.html" class="nav-button">Home</a>
+                <a href="resume.html" class="nav-button">Resume</a>
+                <a href="experience.html" class="nav-button">Experience</a>
+                <a href="education.html" class="nav-button">Education</a>
+                <a href="skills.html" class="nav-button">Skills</a>
+                <a href="projects.html" class="nav-button">Projects</a>
+                <a href="activities.html" class="nav-button">Activities</a>
+                <a href="certifications.html" class="nav-button">Certifications</a>
+                <a href="badges.html" class="nav-button">Badges</a>
+                <a href="languages.html" class="nav-button">Languages</a>
+                <a href="connect.html" class="nav-button active">Connect Me</a>
+            </div>
+        </nav>
+
+        <main>
+            <section class="contact-info-section">
+                <h2><i class="fas fa-address-card"></i> Contact Information</h2>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:mahekaraditya468@gmail.com">mahekaraditya468@gmail.com</a>
+                            <p>Primary contact method</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <a href="tel:9480100787">+91 9480100787</a>
+                            <p>Available for calls and WhatsApp</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/aditya-mahekar/" target="_blank">linkedin.com/in/aditya-mahekar</a>
+                            <p>Professional network</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/adityamahekar" target="_blank">github.com/adityamahekar</a>
+                            <p>Code repositories and projects</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LeetCode</h3>
+                            <a href="https://leetcode.com/u/aditya__mahekar/" target="_blank">leetcode.com/u/aditya__mahekar</a>
+                            <p>Coding practice and challenges</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-figma"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Figma</h3>
+                            <a href="https://www.figma.com/files/team/1519982424999534908/recents-and-sharing?fuid=1519982419772983298" target="_blank">Figma Drafts</a>
+                            <p>UI/UX design projects</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>HackerEarth</h3>
+                            <a href="https://www.hackerearth.com/@aditya__mahekar/" target="_blank">hackerearth.com/@aditya__mahekar</a>
+                            <p>Coding competitions</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <span>Bengaluru, Karnataka, India</span>
+                            <p>Open to remote and local opportunities</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="message-form-section">
+                <h2><i class="fas fa-paper-plane"></i> Send Me a Message</h2>
+                <div class="message-form">
+                    <form id="contactForm" action="https://formsubmit.co/mahekaraditya468@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission - Portfolio">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://adityamahekar.github.io/MyWeb/thank-you.html">
+                        
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="_subject" placeholder="What is this regarding?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project, opportunity, or just say hello..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-button" id="submitButton">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="availability-section">
+                <h2><i class="fas fa-clock"></i> Availability</h2>
+                <div class="availability-grid">
+                    <div class="availability-item">
+                        <div class="availability-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="availability-details">
+                            <h3>Job Opportunities</h3>
+                            <p>Open to full-time positions, internships, and freelance projects in software development and engineering.</p>
+                        </div>
+                    </div>
+
+                    <div class="availability-item">
+                        <div class="availability-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <div class="availability-details">
+                            <h3>Collaborations</h3>
+                            <p>Interested in collaborating on open-source projects, hackathons, and innovative tech solutions.</p>
+                        </div>
+                    </div>
+
+                    <div class="availability-item">
+                        <div class="availability-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="availability-details">
+                            <h3>Networking</h3>
+                            <p>Always happy to connect with fellow developers, mentors, and tech enthusiasts.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Aditya Mahekar. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="connect.js"></script>
+</body>
+</html>

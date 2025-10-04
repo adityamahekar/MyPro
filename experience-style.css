@@ -1,0 +1,99 @@
+@import url('style.css');
+
+.experience-section, .volunteer-section {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.experience-section:hover, .volunteer-section:hover {
+    box-shadow: var(--hover-shadow);
+    transform: translateY(-5px);
+}
+
+.experience-item, .volunteer-item {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent-color);
+    background: rgba(67, 97, 238, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover, .volunteer-item:hover {
+    background: rgba(67, 97, 238, 0.1);
+    transform: translateX(10px);
+}
+
+.experience-header, .volunteer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.experience-header h3, .volunteer-header h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.experience-date, .volunteer-date {
+    background: var(--gradient);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.company {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.back-button {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-5px);
+}
+
+@media (max-width: 768px) {
+    .experience-header, .volunteer-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .experience-date, .volunteer-date {
+        align-self: flex-start;
+    }
+    
+    .back-button {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+}
