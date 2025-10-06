@@ -10,9 +10,7 @@
 <body>
     <div class="container">
         <header>
-            <a href="index.html" class="back-button">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </a>
+            
             <h1>Projects</h1>
             <p>My development projects and creations</p>
         </header>
@@ -25,6 +23,7 @@
                 <a href="education.html" class="nav-button">Education</a>
                 <a href="skills.html" class="nav-button">Skills</a>
                 <a href="projects.html" class="nav-button active">Projects</a>
+                <a href="uiux.html" class="nav-button">UIUX Drafts</a>
                 <a href="activities.html" class="nav-button">Activities</a>
                 <a href="certifications.html" class="nav-button">Certifications</a>
                 <a href="badges.html" class="nav-button">Badges</a>
@@ -34,19 +33,20 @@
         </nav>
 
         <main>
+            <!-- Filter Pills -->
             <div class="project-filters">
-                <span class="filter-pill active" data-filter="all">All Projects</span>
-                <span class="filter-pill" data-filter="major">Major Projects</span>
-                <span class="filter-pill" data-filter="mini">Mini Projects</span>
-                <span class="filter-pill" data-filter="micro">Micro Projects</span>
-                <span class="filter-pill" data-filter="nano">Nano Projects</span>
+                <button class="filter-pill active" data-filter="all">All Projects</button>
+                <button class="filter-pill" data-filter="major">Major Projects</button>
+                <button class="filter-pill" data-filter="mini">Mini Projects</button>
+                <button class="filter-pill" data-filter="micro">Micro Projects</button>
+                <button class="filter-pill" data-filter="nano">Nano Projects</button>
             </div>
             
             <div class="projects-grid">
                 <!-- Blood Donation Management System -->
                 <div class="project-card" data-type="mini">
                     <div class="project-image">
-                        <img src="./images/c16.png" alt="Blood Donation Management System">
+                        <img src="./images/p1.png" alt="Blood Donation Management System">
                     </div>
                     <div class="project-details">
                         <h3>Blood Donation Management System</h3>
@@ -57,6 +57,7 @@
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">JavaScript</span>
                             <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MySQL</span>
                         </div>
                         <div class="project-links">
                             <a href="https://blood-donation-management-bht9.onrender.com/" target="_blank" class="project-link">
@@ -72,7 +73,7 @@
                 <!-- Portfolio Website -->
                 <div class="project-card" data-type="mini">
                     <div class="project-image">
-                        <img src="./images/c15.png" alt="Portfolio Website">
+                        <img src="./images/p2.png" alt="Portfolio Website">
                     </div>
                     <div class="project-details">
                         <h3>Personal Portfolio Website</h3>
@@ -98,7 +99,7 @@
                 <!-- EdTech Platform -->
                 <div class="project-card" data-type="mini">
                     <div class="project-image">
-                        <img src="./images/EdTech_img.png" alt="EdTech Platform">
+                        <img src="./images/p3.png" alt="EdTech Platform">
                     </div>
                     <div class="project-details">
                         <h3>EdTech Platform</h3>
@@ -124,7 +125,7 @@
                 <!-- Pick and Place Robot -->
                 <div class="project-card" data-type="major">
                     <div class="project-image">
-                        <img src="./images/Pick_and_Place_img.png" alt="Pick and Place Robot">
+                        <img src="./images/p4.png" alt="Pick and Place Robot">
                     </div>
                     <div class="project-details">
                         <h3>Pick and Place Robot</h3>
@@ -147,7 +148,7 @@
                 <!-- Dice Game -->
                 <div class="project-card" data-type="micro">
                     <div class="project-image">
-                        <img src="./images/DiceGame.png" alt="Dice Game">
+                        <img src="./images/p5.png" alt="Dice Game">
                     </div>
                     <div class="project-details">
                         <h3>Dice Game</h3>
@@ -173,7 +174,7 @@
                 <!-- Drum Kit -->
                 <div class="project-card" data-type="micro">
                     <div class="project-image">
-                        <img src="./images/DrumKit.png" alt="Drum Kit">
+                        <img src="./images/p6.png" alt="Drum Kit">
                     </div>
                     <div class="project-details">
                         <h3>Drum Kit</h3>
@@ -199,7 +200,7 @@
                 <!-- Simon Game -->
                 <div class="project-card" data-type="micro">
                     <div class="project-image">
-                        <img src="./images/simon_game.png" alt="Simon Game">
+                        <img src="./images/p7.png" alt="Simon Game">
                     </div>
                     <div class="project-details">
                         <h3>Simon Game</h3>
@@ -209,7 +210,7 @@
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Game Logic</span>
+                            
                         </div>
                         <div class="project-links">
                             <a href="https://adityamahekar.github.io/SimonGame/" target="_blank" class="project-link">
@@ -225,7 +226,7 @@
                 <!-- QR Code Generator -->
                 <div class="project-card" data-type="nano">
                     <div class="project-image">
-                        <img src="./images/qr_gen.png" alt="QR Code Generator">
+                        <img src="./images/p13.png" alt="QR Code Generator">
                     </div>
                     <div class="project-details">
                         <h3>QR Code Generator</h3>
@@ -251,7 +252,7 @@
                 <!-- Tiny Dog Website -->
                 <div class="project-card" data-type="nano">
                     <div class="project-image">
-                        <img src="./images/td1.png" alt="Tiny Dog Website">
+                        <img src="./images/p8.png" alt="Tiny Dog Website">
                     </div>
                     <div class="project-details">
                         <h3>Tiny Dog Website</h3>
@@ -269,7 +270,639 @@
                         </div>
                     </div>
                 </div>
-            </div>
+           
+
+
+             <!-- Snake Game -->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p9.png" alt="Snake Game">
+                    </div>
+                    <div class="project-details">
+                        <h3>Snake Game</h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>A classic Snake Game built using HTML, CSS, and JavaScript. Control the snake using arrow keys to eat food, grow in length, and try not to collide with the walls or yourself.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                          
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                
+             <!-- World Capital Quizz -->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p12.png" alt="World Capital Quizz">
+                    </div>
+                    <div class="project-details">
+                        <h3>World Capital Quizz</h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>This is a simple World Capitals App built with Express.js, PostgreSQL, and EJS. Users can view the list of countries and their capitals, and add new entries via a form. The app demonstrates full-stack integration with a PostgreSQL database and server-side rendering. Screenshots below showcase the main pages and functionality of the app.</p>
+                        <div class="project-tech">
+                               <span class="tech-tag">EJS</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                          <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Recipe Page using JSON -->
+                <div class="project-card" data-type="nano">
+                    <div class="project-image">
+                        <img src="./images/p14.png" alt="Recipe Page using JSON">
+                    </div>
+                    <div class="project-details">
+                        <h3>Recipe Page using JSON</h3>
+                        <p class="project-type">Nano Project</p>
+                        <p>A simple website showcasing taco recipes dynamically using JSON data.
+Built with EJS, CSS, and Node.js + Express.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">EJS</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                          
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <!-- Demo Website – Animated Header & Footer -->
+                <div class="project-card" data-type="nano">
+                    <div class="project-image">
+                        <img src="./images/p16.png" alt="Demo Website – Animated Header & Footer">
+                    </div>
+                    <div class="project-details">
+                        <h3>Demo Website – Animated Header & Footer</h3>
+                        <p class="project-type">Nano Project</p>
+                        <p>A simple demo website showcasing a reusable header and footer with smooth animations.
+Built using EJS, CSS, and JavaScript, powered by Node.js & Express.</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">EJS</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                             <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                          
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                         <!-- Permalist / To-Do List -->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p10.png" alt="Permalist / To-Do List">
+                    </div>
+                    <div class="project-details">
+                        <h3>Permalist / To-Do List</h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>Permalist is a lightweight to-do list application built with Node.js, Express, EJS, and SQL. It allows users to add, edit, and delete tasks with a clean and responsive interface. The app uses partials for a reusable header and footer, SVG icons for actions, and a persistent SQL database to ensure tasks are saved permanently.</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">EJS</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                             <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                             <span class="tech-tag">PostgreSQL</span>
+                          
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                 <!-- Government School Website -->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p11.png" alt="Government School Website">
+                    </div>
+                    <div class="project-details">
+                        <h3>Government School Website</h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>A responsive school website for Shivaji Balmandir Kannada Medium School, Baad Karwar.
+The website includes sections like Home, About, Infrastructure, Academy, Admission, Notice, Gallery, and Contact.
+It also features a language toggle to switch between English and Kannada.</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                           <span class="tech-tag">Responsive Design</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Analog Clock -->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p17.png" alt="Analog Clock">
+                    </div>
+                    <div class="project-details">
+                        <h3>Analog Clock</h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>An interactive analog clock built using HTML, CSS, and JavaScript.
+It visually represents the hour, minute, and second hands with accurate rotations based on real time.</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                          
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Travel Tracker -->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p18.png" alt="Travel Tracker">
+                    </div>
+                    <div class="project-details">
+                        <h3>Travel Tracker</h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>The Travel Tracker is a web application that allows users to keep track of the countries they have visited. Users can enter the name of a country, and the app highlights it on a world map. The total number of visited countries is displayed at the bottom, giving travelers a visual representation of their journeys.
+This project is built with Node.js, Express, PostgreSQL, and EJS templates, styled with CSS. It uses a database to store users and their visited countries, dynamically updating the map based on user input.</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">EJS</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                             <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                             <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <!-- Family Travel Tracker -->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p19.png" alt="Family Travel Tracker">
+                    </div>
+                    <div class="project-details">
+                        <h3>Family Travel Tracker</h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>he Family Travel Tracker is a web application that allows family members to keep track of the countries they have visited. Each family member has their own profile with a custom color, and the app highlights visited countries on a shared world map. The total num</p>
+                        <div class="project-tech">
+                               <span class="tech-tag">EJS</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                             <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                             <span class="tech-tag">PostgreSQL</span>
+                          
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <!-- Emojipedia (React.js Project) -->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p20.png" alt="Emojipedia (React.js Project)">
+                    </div>
+                    <div class="project-details">
+                        <h3>Emojipedia (React.js Project)</h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>Emojipedia is a simple React.js project that displays emoji meanings in a fun and interactive way.
+It demonstrates React components, props, mapping arrays, and modular code structure.</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                             <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                             <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Vite</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Login and Register (React.js Project) -->
+                <div class="project-card" data-type="nano">
+                    <div class="project-image">
+                        <img src="./images/p21.png" alt=" Login and Register (React.js Project) ">
+                    </div>
+                    <div class="project-details">
+                        <h3>Login and Register (React.js Project) </h3>
+                        <p class="project-type">Nano Project</p>
+                        <p>A clean and simple React.js application that demonstrates Login and Register user interfaces.
+Built using React, JavaScript (ES6), HTML5, and CSS3.</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript(E26)</span>
+                             <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Vite</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- API for Blog-->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p26.png" alt=" API for Blog ">
+                    </div>
+                    <div class="project-details">
+                        <h3>API for Blog </h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>This project is a minimal Express-based blog API designed to perform CRUD (Create, Read, Update, Delete) operations.</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                             <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+                <!--  Guess the Flag Game-->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p27.png" alt="  Guess the Flag Game ">
+                    </div>
+                    <div class="project-details">
+                        <h3> Guess the Flag Game </h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>This is a fun Guess the Flag game built with Express.js, PostgreSQL, and EJS. Users can test their knowledge of world flags by trying to match a flag with the correct country. The game demonstrates server-side rendering, database integration, and interactive user input. Screenshots below showcase the main pages and gameplay.</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                             <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                             <span class="tech-tag">PostgreSQL</span>
+                          
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <!-- Login/Register Page using Level 1 Authentication-->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p22.png" alt=" Login/Register Page using Level 1 Authentication ">
+                    </div>
+                    <div class="project-details">
+                        <h3>Login/Register Page - Level 1 Authentication </h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>This project is a basic authentication system built with Node.js, Express, EJS, and PostgreSQL.
+It demonstrates Level 1 Authentication (using email & password without hashing/encryption).</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">EJS</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                             <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                             <span class="tech-tag">Chiper</span>
+                          
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <!-- Login/Register Page using Level 2 + 3 Authentication-->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p23.png" alt=" Login/Register Page using Level 2 + 3 Authentication ">
+                    </div>
+                    <div class="project-details">
+                        <h3>Login/Register Page - Level 2 + 3 Authentication </h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>This project is a Login & Register Authentication System built with Node.js, Express, EJS, and PostgreSQL. It demonstrates Level 2 Authentication, where user passwords are salted and hashed using bcrypt.js (Blowfish cipher) before storing them in the database.
+Users can register with an email and password, log in securely, and gain access to a protected secrets page. The project follows a modular EJS structure using partials (header.ejs, footer.ejs) and serves static assets through the public folder.</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">EJS</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                             <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                             <span class="tech-tag">Hashing</span>
+                              <span class="tech-tag">Salt Rounds (bcrypt)</span>
+                          
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Login/Register Page using Level 4 Authentication-->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p24.png" alt=" Login/Register Page using Level 4 Authentication ">
+                    </div>
+                    <div class="project-details">
+                        <h3>Login/Register Page - Level 4 Authentication </h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>This project is a Login & Register Authentication System built with Node.js, Express, EJS, PostgreSQL, Passport.js, express-session, and cookies. It demonstrates Level 4 Authentication, where user passwords are securely salted & hashed (bcrypt.js), and authentication is managed with sessions and cookies using Passport.js.
+
+Users can:
+Register with an email and password,
+Log in securely (session stored in a cookie),
+Access a protected secrets page only when authenticated,
+Logout (session destroyed),
+The project follows a modular EJS structure using partials (header.ejs, footer.ejs) and serves static assets through the public/ folder.
+
+</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">EJS</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                             <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                             <span class="tech-tag">PostgreSQL</span>
+                              <span class="tech-tag">Sessions based Authentication</span>
+                               <span class="tech-tag">Passport </span>
+                                <span class="tech-tag">Cookies </span>
+                          
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <!-- Login/Register Page using Level 5 Authentication-->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p25.png" alt=" Login/Register Page using Level 5 Authentication ">
+                    </div>
+                    <div class="project-details">
+                        <h3>Login/Register Page - Level 5 Authentication </h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>This project is a Login & Register Authentication System built with Node.js, Express, EJS, and PostgreSQL. It demonstrates Level 5 Authentication, where:
+User passwords are hashed and salted using bcrypt.js.
+Session-based authentication is implemented with cookies using express-session.
+Database credentials and session secrets are stored in environment variables (.env) for security.
+Users can register with an email and password, log in securely, and access a protected secrets page. The project uses a modular EJS structure with partials (header.ejs, footer.ejs) and serves static assets through the public folder.</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">EJS</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                             <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">Sessions based Authentication</span>
+                              <span class="tech-tag">Environment Variables</span>
+                          
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <!-- Login/Register Page using Level 6 Authentication-->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p28.png" alt=" Login/Register Page using Level 6 Authentication ">
+                    </div>
+                    <div class="project-details">
+                        <h3>Login/Register Page - Level 6 Authentication </h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>This project extends Level 5 Authentication by adding Google OAuth 2.0 login. Users can log in either with their email/password or via their Google account. The application uses Node.js, Express, EJS, PostgreSQL, Passport.js, and environment variables for secure configuration.
+Features:
+
+Users can register with email and password (Level 5 auth),
+Users can log in using their Google account via OAuth 2.0,
+Session-based authentication ensures users stay logged in across pages,
+Protected routes like /secrets are accessible only to authenticated users,
+Database credentials and session secrets are securely stored in a .env file.
+</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">EJS</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                             <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">OAuth (Open Authorization)</span>
+                          
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                  <!-- Random Secrets -->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p15.png" alt="  Random Secrets ">
+                    </div>
+                    <div class="project-details">
+                        <h3> Random Secrets</h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>A simple Node.js project using secrets API for generating and knowing random secrets.</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">EJS</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                             <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Secret API</span>
+                          
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                 <!--  Authorized Secret Storing Web -->
+                <div class="project-card" data-type="micro">
+                    <div class="project-image">
+                        <img src="./images/p29.png" alt="  Authorized Secret Storing Web ">
+                    </div>
+                    <div class="project-details">
+                        <h3> Authorized Secret Storing Web</h3>
+                        <p class="project-type">Micro Project</p>
+                        <p>This project is a simple secret-storing platform built with Node.js, Express, EJS, and PostgreSQL.
+It allows users to register, log in, and store their secrets securely.
+
+The project follows a modular EJS structure using partials (header.ejs, footer.ejs) and serves static assets through the public/ folder.
+
+
+</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">EJS</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                             <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                          
+                        </div>
+                        <div class="project-links">
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                 </div>
+
         </main>
 
         <footer>
@@ -281,6 +914,99 @@
         <i class="fas fa-moon"></i>
     </button>
 
-    <script src="projects.js"></script>
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const isDarkMode = body.classList.contains('dark-mode');
+            const themeToggles = document.querySelectorAll('#themeToggle, #projectsThemeToggle');
+            
+            if (isDarkMode) {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+                themeToggles.forEach(toggle => {
+                    toggle.innerHTML = '<i class="fas fa-moon"></i>';
+                });
+            } else {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+                themeToggles.forEach(toggle => {
+                    toggle.innerHTML = '<i class="fas fa-sun"></i>';
+                });
+            }
+        }
+
+        // Initialize theme from localStorage
+        function initializeTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const themeToggles = document.querySelectorAll('#themeToggle, #projectsThemeToggle');
+            
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.body.classList.add('dark-mode');
+                themeToggles.forEach(toggle => {
+                    toggle.innerHTML = '<i class="fas fa-sun"></i>';
+                });
+            } else {
+                document.body.classList.remove('dark-mode');
+                themeToggles.forEach(toggle => {
+                    toggle.innerHTML = '<i class="fas fa-moon"></i>';
+                });
+            }
+        }
+
+        // Simple and working project filter
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Initializing project filters...');
+            
+            // Initialize theme first
+            initializeTheme();
+            
+            // Add event listeners to theme toggle buttons
+            const themeToggles = document.querySelectorAll('#themeToggle, #projectsThemeToggle');
+            themeToggles.forEach(toggle => {
+                toggle.addEventListener('click', toggleTheme);
+            });
+            
+            const filterPills = document.querySelectorAll('.filter-pill');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            console.log('Found', filterPills.length, 'filter pills');
+            console.log('Found', projectCards.length, 'project cards');
+            
+            filterPills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    console.log('Filter clicked:', this.textContent);
+                    
+                    // Remove active class from all pills
+                    filterPills.forEach(p => p.classList.remove('active'));
+                    
+                    // Add active class to clicked pill
+                    this.classList.add('active');
+                    
+                    // Get filter value
+                    const filterValue = this.getAttribute('data-filter');
+                    console.log('Filtering by:', filterValue);
+                    
+                    // Filter projects
+                    projectCards.forEach(card => {
+                        const projectType = card.getAttribute('data-type');
+                        console.log('Card type:', projectType, 'should show:', filterValue === 'all' || projectType === filterValue);
+                        
+                        if (filterValue === 'all' || projectType === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Test: Log all project types
+            projectCards.forEach((card, index) => {
+                console.log('Project', index + 1, 'type:', card.getAttribute('data-type'));
+            });
+        });
+    </script>
 </body>
 </html>

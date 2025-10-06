@@ -1,5 +1,79 @@
 @import url('style.css');
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #7209b7;
+    --accent-color: #f72585;
+    --text-color: #333333;
+    --text-light: #ffffff;
+    --background-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    --gradient: linear-gradient(135deg, #4361ee 0%, #7209b7 100%);
+}
 
+body.dark-mode {
+    --primary-color: #4361ee;
+    --secondary-color: #7209b7;
+    --accent-color: #f72585;
+    --text-color: #f0f0f0;
+    --text-light: #ffffff;
+    --background-color: #1a1a1a;
+    --card-bg: #2d2d2d;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    --gradient: linear-gradient(135deg, #4361ee 0%, #7209b7 100%);
+}
+
+/* Back button styling */
+.back-button {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 2;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-5px);
+}
+
+/* Projects specific theme toggle */
+.projects-theme-toggle {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    z-index: 2;
+    font-size: 1.2rem;
+}
+
+.projects-theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1) rotate(30deg);
+}
+
+/* Filter Pills */
 .project-filters {
     display: flex;
     justify-content: center;
@@ -20,6 +94,8 @@
     box-shadow: var(--shadow);
     position: relative;
     border: 2px solid transparent;
+    border: none;
+    outline: none;
 }
 
 .filter-pill::before {
@@ -45,6 +121,7 @@
     box-shadow: var(--hover-shadow);
 }
 
+/* Projects Grid */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -58,6 +135,8 @@
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
     position: relative;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .project-card::before {
@@ -193,24 +272,43 @@
     color: var(--text-color);
 }
 
-.back-button {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 0.7rem 1.2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+/* Animation for project cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.back-button:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateX(-5px);
+.project-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+.project-card:nth-child(6) { animation-delay: 0.6s; }
+.project-card:nth-child(7) { animation-delay: 0.7s; }
+.project-card:nth-child(8) { animation-delay: 0.8s; }
+
+/* Smooth filtering animation */
+.project-card {
+    transition: all 0.4s ease;
+}
+
+.project-card.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -234,11 +332,13 @@
         margin-bottom: 1rem;
         display: inline-block;
     }
-}
-
-@media (max-width: 480px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
+    
+    .projects-theme-toggle {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-left: 1rem;
+        display: inline-flex;
     }
     
     .project-links {
@@ -247,5 +347,23 @@
     
     .project-link {
         justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-details {
+        padding: 1.2rem;
+    }
+    
+    .project-details h3 {
+        font-size: 1.2rem;
     }
 }

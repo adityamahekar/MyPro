@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,11 @@
     <link rel="stylesheet" href="badges-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <div class="container">
         <header>
-            <a href="index.html" class="back-button">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </a>
+
             <h1>Badges & Achievements</h1>
             <p>My digital badges and recognition</p>
         </header>
@@ -25,6 +25,7 @@
                 <a href="education.html" class="nav-button">Education</a>
                 <a href="skills.html" class="nav-button">Skills</a>
                 <a href="projects.html" class="nav-button">Projects</a>
+                <a href="uiux.html" class="nav-button">UIUX Drafts</a>
                 <a href="activities.html" class="nav-button">Activities</a>
                 <a href="certifications.html" class="nav-button">Certifications</a>
                 <a href="badges.html" class="nav-button active">Badges</a>
@@ -34,35 +35,58 @@
         </nav>
 
         <main>
-            <section class="badges-intro">
-                <h2><i class="fas fa-award"></i> Platform Badges</h2>
-                <p>These badges represent my achievements and skills across various online learning platforms and coding websites.</p>
-            </section>
-
             <!-- GitHub Badges -->
             <section class="badges-category">
                 <h3><i class="fab fa-github"></i> GitHub Badges</h3>
                 <div class="badges-grid">
                     <div class="badge-item">
                         <div class="badge-icon github">
-                            <i class="fab fa-github"></i>
+                            <img src="./images/b1.png" height="80px" width="80px" alt="Pull Shark Badge" />
                         </div>
                         <div class="badge-info">
-                            <h4>GitHub Contributor</h4>
-                            <p>Active contributor to open-source projects</p>
+                            <h4>Pull Shark Badge</h4>
+                            <p>Opened a pull request that has been merged</p>
                             <span class="badge-date">Earned: 2025</span>
                         </div>
                     </div>
+
                     <div class="badge-item">
                         <div class="badge-icon github">
-                            <i class="fas fa-code-branch"></i>
+                            <img src="./images/b2.png" height="80px" width="80px" alt="Starstruck Badge" />
                         </div>
                         <div class="badge-info">
-                            <h4>Version Control Master</h4>
-                            <p>Proficient in Git and GitHub workflows</p>
+                            <h4>Starstruck Badge</h4>
+                            <p>Created a repository that has many stars</p>
                             <span class="badge-date">Earned: 2025</span>
                         </div>
                     </div>
+
+                    <div class="badge-item">
+                        <div class="badge-icon github">
+                            <img src="./images/b4.png" height="80px" width="80px" alt="YOLO Badge" />
+                        </div>
+                        <div class="badge-info">
+                            <h4>YOLO Badge</h4>
+                            <p>Merged a pull request without a review</p>
+                            <span class="badge-date">Earned: 2025</span>
+                        </div>
+                    </div>
+
+
+                    <div class="badge-item">
+                        <div class="badge-icon github">
+                            <img src="./images/b3.png" height="80px" width="80px" alt="Quickdraw Badge" />
+                        </div>
+                        <div class="badge-info">
+                            <h4>Quickdraw Badge</h4>
+                            <p>Gitty up!
+(closed an issue / pull request within 5 minutes of opening)</p>
+                            <span class="badge-date">Earned: 2025</span>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </section>
 
@@ -72,29 +96,19 @@
                 <div class="badges-grid">
                     <div class="badge-item">
                         <div class="badge-icon leetcode">
-                            <i class="fas fa-fire"></i>
+                            <img src="./images/b5.png" height="80px" width="80px" alt="50days Badge" />
                         </div>
                         <div class="badge-info">
-                            <h4>150+ Problems Solver</h4>
-                            <p>Successfully solved 150+ algorithm challenges</p>
+                            <h4>50days Badge</h4>
+                            <p>50days of Leetcode problem solving</p>
                             <span class="badge-date">Earned: 2025</span>
                         </div>
                     </div>
-                    <div class="badge-item">
-                        <div class="badge-icon leetcode">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <div class="badge-info">
-                            <h4>DSA Specialist</h4>
-                            <p>Strong in Data Structures & Algorithms</p>
-                            <span class="badge-date">Earned: 2025</span>
-                        </div>
-                    </div>
-                </div>
+                  
             </section>
 
             <!-- HackerEarth Badges -->
-            <section class="badges-category">
+             <!--<section class="badges-category">
                 <h3><i class="fas fa-laptop-code"></i> HackerEarth Badges</h3>
                 <div class="badges-grid">
                     <div class="badge-item">
@@ -108,10 +122,10 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- Workshop Badges -->
-            <section class="badges-category">
+            <!-- <section class="badges-category">
                 <h3><i class="fas fa-chalkboard-teacher"></i> Workshop Badges</h3>
                 <div class="badges-grid">
                     <div class="badge-item">
@@ -135,10 +149,10 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- Skill Badges -->
-            <section class="badges-category">
+            <!-- <section class="badges-category">
                 <h3><i class="fas fa-cogs"></i> Skill Badges</h3>
                 <div class="badges-grid">
                     <div class="badge-item">
@@ -180,9 +194,9 @@
                             <p>MySQL, MongoDB, PostgreSQL</p>
                             <span class="badge-date">Earned: 2025</span>
                         </div>
-                    </div>
-                </div>
-            </section>
+                    </div> 
+               </div>
+            </section> -->
         </main>
 
         <footer>
@@ -194,6 +208,7 @@
         <i class="fas fa-moon"></i>
     </button>
 
-    <script src="script.js"></script>
+    <script src="badges.js"></script>
 </body>
+
 </html>

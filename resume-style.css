@@ -1,10 +1,45 @@
 @import url('style.css');
 
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #7209b7;
+    --accent-color: #f72585;
+    --text-color: #333333;
+    --text-light: #ffffff;
+    --background-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    --gradient: linear-gradient(135deg, #4361ee 0%, #7209b7 100%);
+}
+
+/* Dark mode variables - corrected to match main CSS */
+.dark-mode {
+    --primary-color: #4895ef;
+    --secondary-color: #560bad;
+    --accent-color: #f72585;
+    --text-color: #e0e0e0;
+    --text-light: #ffffff;
+    --background-color: #121212;
+    --card-bg: #1e1e1e;
+    --shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    --hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --gradient: linear-gradient(135deg, #4895ef 0%, #560bad 50%, #7209b7 100%);
+}
+
+/* Apply dark mode styles to body */
+body.dark-mode {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
 .resume-container {
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .resume-header {
@@ -53,6 +88,7 @@
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
+    background-color: var(--background-color);
 }
 
 .resume-download {
@@ -164,6 +200,151 @@
     transform: translateX(-5px);
 }
 
+/* Resume specific theme toggle */
+.resume-theme-toggle {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    z-index: 2;
+    font-size: 1.2rem;
+}
+
+.resume-theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1) rotate(30deg);
+}
+
+/* Additional resume sections styling */
+.experience-item, .education-item, .skill-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .experience-item,
+.dark-mode .education-item,
+.dark-mode .skill-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.experience-item:last-child,
+.education-item:last-child,
+.skill-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.experience-title, .education-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience-company, .education-institution {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience-date, .education-date {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.experience-description, .education-description {
+    line-height: 1.6;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-category {
+    margin-bottom: 2rem;
+}
+
+.skill-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skill-tag {
+    background: rgba(67, 97, 238, 0.1);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.download-button {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(247, 37, 133, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.download-button:hover {
+    background: #d11674;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(247, 37, 133, 0.4);
+    animation: none;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+@keyframes rotateBackground {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 @media (max-width: 768px) {
     .quick-links-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -181,10 +362,35 @@
         margin-bottom: 1rem;
         display: inline-block;
     }
+    
+    .resume-theme-toggle {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-left: 1rem;
+        display: inline-flex;
+    }
+    
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
     .quick-links-grid {
         grid-template-columns: 1fr;
     }
+    
+    .resume-header h1 {
+        font-size: 2rem;
+    }
+    
+    .resume-header p {
+        font-size: 1rem;
+    }
+    
+    .resume-section {
+        padding: 1.5rem;
+    }
 }
+

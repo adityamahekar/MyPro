@@ -1,5 +1,45 @@
+// Theme toggle functionality for connect page
+function toggleTheme() {
+    const body = document.body;
+    const isDarkMode = body.classList.contains('dark-mode');
+    const themeToggles = document.querySelectorAll('#themeToggle, #connectThemeToggle');
+    
+    if (isDarkMode) {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+        themeToggles.forEach(toggle => {
+            toggle.innerHTML = '<i class="fas fa-moon"></i>';
+        });
+    } else {
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+        themeToggles.forEach(toggle => {
+            toggle.innerHTML = '<i class="fas fa-sun"></i>';
+        });
+    }
+}
+
+// Initialize theme from localStorage
+function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const themeToggles = document.querySelectorAll('#themeToggle, #connectThemeToggle');
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.body.classList.add('dark-mode');
+        themeToggles.forEach(toggle => {
+            toggle.innerHTML = '<i class="fas fa-sun"></i>';
+        });
+    } else {
+        document.body.classList.remove('dark-mode');
+        themeToggles.forEach(toggle => {
+            toggle.innerHTML = '<i class="fas fa-moon"></i>';
+        });
+    }
+}
+
 // Contact form handling
-document.addEventListener('DOMContentLoaded', function() {
+function initializeContactForm() {
     const contactForm = document.getElementById('contactForm');
     const submitButton = document.getElementById('submitButton');
 
@@ -60,25 +100,83 @@ document.addEventListener('DOMContentLoaded', function() {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
     }
-});
+}
 
-// Add smooth scrolling for anchor links
-document.addEventListener('DOMContentLoaded', function() {
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+// Add animation to contact items when they come into view
+function initializeAnimations() {
+    const contactItems = document.querySelectorAll('.contact-info .contact-item');
+    const availabilityItems = document.querySelectorAll('.availability-item');
     
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                observer.unobserve(entry.target);
             }
         });
+    }, { threshold: 0.1 });
+    
+    contactItems.forEach(item => {
+        item.style.opacity = '0';
+        observer.observe(item);
     });
+    
+    availabilityItems.forEach(item => {
+        item.style.opacity = '0';
+        observer.observe(item);
+    });
+}
+
+// Initialize everything when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initializeTheme();
+    
+    // Add event listeners to all theme toggle buttons
+    const themeToggles = document.querySelectorAll('#themeToggle, #connectThemeToggle');
+    themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', toggleTheme);
+    });
+    
+    initializeContactForm();
+    initializeAnimations();
+    
+    // Add CSS for animations if not already present
+    if (!document.querySelector('#connect-animations')) {
+        const style = document.createElement('style');
+        style.id = 'connect-animations';
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .contact-info .contact-item,
+            .availability-item {
+                opacity: 0;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+});
+
+// Handle responsive behavior
+window.addEventListener('resize', function() {
+    // Any responsive adjustments can be added here
+    const contactInfo = document.querySelector('.contact-info');
+    
+    if (window.innerWidth <= 768) {
+        if (contactInfo) {
+            contactInfo.style.gap = '1rem';
+        }
+    } else {
+        if (contactInfo) {
+            contactInfo.style.gap = '2rem';
+        }
+    }
 });

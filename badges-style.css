@@ -1,5 +1,31 @@
 @import url('style.css');
 
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #7209b7;
+    --accent-color: #f72585;
+    --text-color: #333333;
+    --text-light: #ffffff;
+    --background-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    --gradient: linear-gradient(135deg, #4361ee 0%, #7209b7 100%);
+}
+
+body.dark-mode {
+    --primary-color: #4361ee;
+    --secondary-color: #7209b7;
+    --accent-color: #f72585;
+    --text-color: #f0f0f0;
+    --text-light: #ffffff;
+    --background-color: #1a1a1a;
+    --card-bg: #2d2d2d;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    --gradient: linear-gradient(135deg, #4361ee 0%, #7209b7 100%);
+}
+
 .badges-intro {
     background-color: var(--card-bg);
     border-radius: 12px;
@@ -137,6 +163,7 @@
     font-weight: 500;
 }
 
+/* Back button styling */
 .back-button {
     position: absolute;
     top: 2rem;
@@ -150,12 +177,68 @@
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 2;
 }
 
 .back-button:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: translateX(-5px);
 }
+
+/* Badges specific theme toggle */
+.badges-theme-toggle {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    z-index: 2;
+    font-size: 1.2rem;
+}
+
+.badges-theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1) rotate(30deg);
+}
+
+/* Animation for badge items */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.badge-item {
+    animation: slideInUp 0.6s ease forwards;
+}
+
+/* Staggered animation delays */
+.badges-category:nth-child(1) .badge-item:nth-child(1) { animation-delay: 0.1s; }
+.badges-category:nth-child(1) .badge-item:nth-child(2) { animation-delay: 0.2s; }
+.badges-category:nth-child(2) .badge-item:nth-child(1) { animation-delay: 0.3s; }
+.badges-category:nth-child(2) .badge-item:nth-child(2) { animation-delay: 0.4s; }
+.badges-category:nth-child(3) .badge-item:nth-child(1) { animation-delay: 0.5s; }
+.badges-category:nth-child(4) .badge-item:nth-child(1) { animation-delay: 0.6s; }
+.badges-category:nth-child(4) .badge-item:nth-child(2) { animation-delay: 0.7s; }
+.badges-category:nth-child(5) .badge-item:nth-child(1) { animation-delay: 0.8s; }
+.badges-category:nth-child(5) .badge-item:nth-child(2) { animation-delay: 0.9s; }
+.badges-category:nth-child(5) .badge-item:nth-child(3) { animation-delay: 1.0s; }
+.badges-category:nth-child(5) .badge-item:nth-child(4) { animation-delay: 1.1s; }
 
 @media (max-width: 768px) {
     .badges-grid {
@@ -175,6 +258,18 @@
         margin-bottom: 1rem;
         display: inline-block;
     }
+    
+    .badges-theme-toggle {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-left: 1rem;
+        display: inline-flex;
+    }
+    
+    .badges-category {
+        padding: 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -184,5 +279,15 @@
     
     .badge-item {
         padding: 1rem;
+    }
+    
+    .badge-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .badge-info h4 {
+        font-size: 1.1rem;
     }
 }
