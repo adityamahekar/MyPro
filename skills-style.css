@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('style.css');
 
 :root {
     --primary-color: #4361ee;
@@ -87,11 +88,6 @@ header::before {
     animation: rotateBackground 20s linear infinite;
 }
 
-@keyframes rotateBackground {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -114,6 +110,7 @@ header p {
     animation: slideInUp 0.8s ease 0.2s both;
 }
 
+/* Back Button */
 .back-button {
     position: absolute;
     top: 2rem;
@@ -138,7 +135,7 @@ header p {
     transform: translateX(-5px);
 }
 
-/* Navigation - Restored to original theme sizing */
+/* Navigation */
 nav {
     background-color: var(--card-bg);
     padding: 0.8rem;
@@ -187,6 +184,7 @@ nav::-webkit-scrollbar {
     flex-shrink: 0;
     margin: 0.2rem;
     min-width: max-content;
+    animation: navPillAppear 0.5s ease forwards;
 }
 
 .nav-button::before {
@@ -230,7 +228,7 @@ main {
     box-sizing: border-box;
 }
 
-/* Experience specific styles */
+/* Experience & Volunteer Sections */
 .experience-section, .volunteer-section {
     background-color: var(--card-bg);
     border-radius: 12px;
@@ -252,6 +250,7 @@ main {
     background: rgba(67, 97, 238, 0.05);
     border-radius: 8px;
     transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease forwards;
 }
 
 .experience-item:hover, .volunteer-item:hover {
@@ -288,6 +287,13 @@ main {
     font-weight: 600;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
+}
+
+/* Section icons */
+.experience-section h2 i,
+.volunteer-section h2 i {
+    margin-right: 0.8rem;
+    color: var(--accent-color);
 }
 
 /* Skills Section */
@@ -328,11 +334,6 @@ main {
     height: 3px;
     background: var(--gradient);
     animation: expandLine 1.5s ease;
-}
-
-@keyframes expandLine {
-    0% { width: 0; }
-    100% { width: 100px; }
 }
 
 .skills-categories {
@@ -411,11 +412,6 @@ footer::before {
     animation: patternMove 20s linear infinite;
 }
 
-@keyframes patternMove {
-    0% { background-position: 0 0; }
-    100% { background-position: 60px 60px; }
-}
-
 footer p {
     position: relative;
     z-index: 1;
@@ -473,54 +469,25 @@ footer p {
     transform: scale(1.1) rotate(30deg);
 }
 
-/* Section icons */
-.experience-section h2 i,
-.volunteer-section h2 i {
-    margin-right: 0.8rem;
-    color: var(--accent-color);
+/* Animations */
+@keyframes rotateBackground {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-/* Animation for experience items */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes patternMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 60px 60px; }
 }
 
-.experience-item, .volunteer-item {
-    animation: fadeInUp 0.6s ease forwards;
-}
-
-.experience-item:nth-child(2) { animation-delay: 0.1s; }
-.experience-item:nth-child(3) { animation-delay: 0.2s; }
-.volunteer-item { animation-delay: 0.3s; }
-
-/* New Animations */
 @keyframes slideInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
@@ -528,34 +495,37 @@ footer p {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Navigation Animation */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes expandLine {
+    0% { width: 0; }
+    100% { width: 100px; }
+}
+
 @keyframes navPillAppear {
-    from {
-        opacity: 0;
-        transform: translateY(-10px) scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+    from { opacity: 0; transform: translateY(-10px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-.nav-button {
-    animation: navPillAppear 0.5s ease forwards;
-}
+/* Staggered animation delays */
+.experience-item:nth-child(2) { animation-delay: 0.1s; }
+.experience-item:nth-child(3) { animation-delay: 0.2s; }
+.volunteer-item { animation-delay: 0.3s; }
 
-/* Stagger animation for navigation pills */
-.nav-scroll-container .nav-button:nth-child(1) { animation-delay: 0.1s; }
-.nav-scroll-container .nav-button:nth-child(2) { animation-delay: 0.15s; }
-.nav-scroll-container .nav-button:nth-child(3) { animation-delay: 0.2s; }
-.nav-scroll-container .nav-button:nth-child(4) { animation-delay: 0.25s; }
-.nav-scroll-container .nav-button:nth-child(5) { animation-delay: 0.3s; }
-.nav-scroll-container .nav-button:nth-child(6) { animation-delay: 0.35s; }
-.nav-scroll-container .nav-button:nth-child(7) { animation-delay: 0.4s; }
-.nav-scroll-container .nav-button:nth-child(8) { animation-delay: 0.45s; }
-.nav-scroll-container .nav-button:nth-child(9) { animation-delay: 0.5s; }
+.nav-scroll-container .nav-button:nth-child(1)  { animation-delay: 0.10s; }
+.nav-scroll-container .nav-button:nth-child(2)  { animation-delay: 0.15s; }
+.nav-scroll-container .nav-button:nth-child(3)  { animation-delay: 0.20s; }
+.nav-scroll-container .nav-button:nth-child(4)  { animation-delay: 0.25s; }
+.nav-scroll-container .nav-button:nth-child(5)  { animation-delay: 0.30s; }
+.nav-scroll-container .nav-button:nth-child(6)  { animation-delay: 0.35s; }
+.nav-scroll-container .nav-button:nth-child(7)  { animation-delay: 0.40s; }
+.nav-scroll-container .nav-button:nth-child(8)  { animation-delay: 0.45s; }
+.nav-scroll-container .nav-button:nth-child(9)  { animation-delay: 0.50s; }
 .nav-scroll-container .nav-button:nth-child(10) { animation-delay: 0.55s; }
-.nav-scroll-container .nav-button:nth-child(11) { animation-delay: 0.6s; }
+.nav-scroll-container .nav-button:nth-child(11) { animation-delay: 0.60s; }
 .nav-scroll-container .nav-button:nth-child(12) { animation-delay: 0.65s; }
 
 /* Dark mode adjustments */
@@ -594,7 +564,7 @@ footer p {
         gap: 0.7rem;
         padding: 0 0.4rem;
     }
-    
+
     .nav-button {
         padding: 0.55rem 1.1rem;
         font-size: 0.82rem;
@@ -605,15 +575,15 @@ footer p {
     header {
         padding: 1.5rem 1rem;
     }
-    
+
     header h1 {
         font-size: 2rem;
     }
-    
+
     header p {
         font-size: 1rem;
     }
-    
+
     .back-button {
         position: relative;
         top: auto;
@@ -621,36 +591,36 @@ footer p {
         margin-bottom: 1rem;
         display: inline-flex;
     }
-    
+
     .nav-scroll-container {
         gap: 0.6rem;
         padding: 0 0.3rem;
     }
-    
+
     .nav-button {
         padding: 0.5rem 1rem;
         font-size: 0.8rem;
     }
-    
+
     main {
         padding: 1.5rem 15px;
     }
-    
+
     .skills-container {
         padding: 1.5rem;
     }
-    
+
     .skill-pill {
         padding: 0.6rem 1rem;
         font-size: 0.9rem;
     }
-    
+
     .skill-pill img {
         height: 14px;
         width: 14px;
         margin-right: 6px;
     }
-    
+
     .theme-toggle {
         width: 50px;
         height: 50px;
@@ -658,16 +628,16 @@ footer p {
         right: 20px;
         font-size: 1.2rem;
     }
-    
+
     .experience-header, .volunteer-header {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .experience-date, .volunteer-date {
         align-self: flex-start;
     }
-    
+
     .experience-theme-toggle {
         position: relative;
         top: auto;
@@ -675,7 +645,7 @@ footer p {
         margin-left: 1rem;
         display: inline-flex;
     }
-    
+
     .experience-section, .volunteer-section {
         padding: 1.5rem;
     }
@@ -685,7 +655,7 @@ footer p {
     .skills-categories {
         justify-content: center;
     }
-    
+
     .skill-pill {
         flex: 1 0 calc(50% - 6px);
         min-width: 0;
@@ -693,25 +663,25 @@ footer p {
         text-align: center;
         margin: 3px;
     }
-    
+
     .skills-container h2 {
         font-size: 1.5rem;
     }
-    
+
     .nav-scroll-container {
         gap: 0.5rem;
         padding: 0 0.2rem;
     }
-    
+
     .nav-button {
         padding: 0.45rem 0.9rem;
         font-size: 0.75rem;
     }
-    
+
     .experience-header h3, .volunteer-header h3 {
         font-size: 1.1rem;
     }
-    
+
     .company {
         font-size: 1rem;
     }
@@ -724,7 +694,7 @@ footer p {
     nav {
         display: none;
     }
-    
+
     .skill-pill {
         break-inside: avoid;
         border: 1px solid #ccc;
